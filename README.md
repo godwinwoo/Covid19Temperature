@@ -13,3 +13,5 @@ https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_c
 2. Install all required imported packages into your python environment.
 
 3. Execute the script.
+
+![Sample Image Output](/Output/2020-03-03_0-40-55.jpg)
