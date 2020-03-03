@@ -14,4 +14,6 @@ https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_c
 
 3. Execute the script.
 
+Sample Output
+
 ![Sample Image Output](/Output/2020-03-03_0-40-55.jpg)
