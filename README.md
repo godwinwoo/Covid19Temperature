@@ -2,7 +2,7 @@
 
 This script takes the latest confirmed cases data from John Hopkins and the next 7 days weather high forecast, and plots 
 a scatterplot along with a regression line and the r2 value in order to find the relationship between infection rate and
-temperature. As more data is collected the r2 should increase.   
+temperature. As more data is collected we hope that r2 will increase.   
 
 
 To run the script:
