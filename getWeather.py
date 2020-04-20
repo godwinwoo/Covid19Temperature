@@ -48,7 +48,7 @@ def get_rate_avg(counts):
 
 def get_infection_rate_and_weather():
     locations = {}
-    with open('Data/time_series_19-covid-Confirmed.csv') as csv_file:
+    with open('Data/time_series_covid19_confirmed_global.csv') as csv_file:
         csv_reader = csv.reader(csv_file)
         row_count = 0
         for row in csv_reader:

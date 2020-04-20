@@ -1,0 +1,41 @@
+import csv
+
+
+def pull_counts(file):
+    result = {}
+
+    # cumulative
+    with open(file) as confirmed:
+        csv_reader = csv.reader(confirmed)
+        row_count = 0
+        for row in csv_reader:
+            row_count = row_count + 1
+            if row[2] == "Lat":  # skip first row
+                continue
+            location = row[0] + " " + row[1]
+            location = location.strip()
+            count = row[-1]
+            # print(location, count)
+            result[location] = count
+    return result
+
+
+def get_death_rates():
+    deaths = pull_counts('Data/time_series_covid19_deaths_global.csv')
+    confirmed = pull_counts('Data/time_series_covid19_confirmed_global.csv')
+    death_rates = {}
+    for key in confirmed.keys():
+        if int(confirmed[key]) == 0 or key not in deaths:
+            continue
+        death_rates[key] = int(deaths[key])/int(confirmed[key])
+
+    keys = sorted(death_rates.keys(), key=lambda x: (-death_rates[x]))
+    for country in keys:
+        print(country, death_rates[country])
+
+
+get_death_rates()
+
+
+
+
